@@ -1,45 +1,49 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
+    <q-img src="../img/header-bg.jpg">
+      <div class="bg-transparent container header-wrapper">
+        <q-toolbar>
+          <q-btn
+            class="screen-mobile"
+            flat
+            dense
+            round
+            icon="menu"
+            aria-label="Menu"
+          />
 
-        <q-toolbar-title>
-          Quasar App
-        </q-toolbar-title>
+          <q-toolbar-title class="screen-tablet text-roboto logo">
+            <router-link to="/" class="link">
+              <q-img src="../img/logo.png" class="logo-img" />
+                tajam
+            </router-link>
+          </q-toolbar-title>
+            <q-tabs
+              active-color="accent"
+              indicator-color="transparent"
+              class="nav"
+            >
+              <q-route-tab name="main" label="HOME" to="/" />
+              <q-route-tab name="about" label="ABOUT" to="/about" />
+              <q-route-tab name="expertise" label="EXPERTISE" to="/expertise" />
+              <q-route-tab name="team" label="TEAM" to="/team" />
+              <q-route-tab name="works" label="WORKS" to="/works" />
+              <q-route-tab name="ps" label="PEOPLE SAY" to="/ps" />
+              <q-route-tab name="contact" label="CONTACT" to="/contact" />
+            </q-tabs>
 
-        <div>Quasar v{{ $q.version }}</div>
-      </q-toolbar>
-    </q-header>
+        </q-toolbar>
+      </div>
 
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-      class="bg-grey-1"
-    >
-      <q-list>
-        <q-item-label
-          header
-          class="text-grey-8"
-        >
-          Essential Links
-        </q-item-label>
-
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
-      </q-list>
-    </q-drawer>
+      <div class="absolute-full text-subtitle2 overlay flex flex-center">
+        
+      </div>
+      <div class="slogan">
+        <span class="slogan-title text-playfair text-weight-bold" >We Are Awesome Creative Agency</span>
+        <span class="slogan-descr text-roboto">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</span>
+        <q-btn outline color="accent" label="LEARN MORE" class="slogan-button" />
+      </div>
+    </q-img>
 
     <q-page-container>
       <router-view />
@@ -47,73 +51,74 @@
   </q-layout>
 </template>
 
-<script>
-import EssentialLink from 'components/EssentialLink.vue'
 
-const linksList = [
-  {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  }
-];
+<style lang="sass" scoped>
+.overlay
+  background-color: #281357
+  opacity: 0.8
 
-import { defineComponent, ref } from 'vue'
+.logo
+  color: #00e0d0
+  font-weight: 200
+  font-size: 30px
 
-export default defineComponent({
-  name: 'MainLayout',
+.link
+  text-decoration: none
+  color: #00e0d0
 
-  components: {
-    EssentialLink
-  },
+.header-wrapper
+  position: relative
+  z-index: 3
 
-  setup () {
-    const leftDrawerOpen = ref(false)
+.q-tab__label
+  font-size: 13px
 
-    return {
-      essentialLinks: linksList,
-      leftDrawerOpen,
-      toggleLeftDrawer () {
-        leftDrawerOpen.value = !leftDrawerOpen.value
-      }
-    }
-  }
-})
-</script>
+.q-tab
+  opacity: 1
+
+.logo-img
+  width: 44px
+
+.slogan-title
+  position: relative
+  display: block
+  font-size: 32px !important
+  margin-bottom: 58px
+  text-align: center
+  &::after
+    position: absolute
+    content: ""
+    height: 1px
+    width: 50px
+    bottom: -27px
+    left: 50%
+    background: #00e0d0
+    transform: translateX(-50%)
+
+.slogan
+  position: absolute
+  background: transparent !important
+  z-index: 3
+  width: 780px
+  top: 50%
+  left: 50%
+  transform: translateX(-50%)
+  margin-top: -130px
+
+.slogan-descr
+  display: block
+  text-align: center
+  font-weight: 300
+  font-size: 14px
+  line-height: 24px
+  margin-bottom: 50px
+
+.slogan-button
+  left: 50%
+  transform: translateX(-50%)
+
+</style>
+
+
+
+

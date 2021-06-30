@@ -1,1 +1,36 @@
 // app global css in SCSS form
+.text-playfair {
+  font-family: 'Playfair Display SC', 'Roboto', Helvetica, sans-serif
+}
+
+.text-roboto {
+  font-family: 'Roboto', Helvetica, sans-serif
+}
+
+.screen-mobile {
+  @media (max-width: $breakpoint-xs-max) {
+    display: block
+  }
+  @media (min-width: $breakpoint-sm-min) {
+    display: none
+  }
+}
+
+.screen-tablet {
+  @media (max-width: $breakpoint-xs-max) {
+    display: none
+  }
+  @media (min-width: $breakpoint-sm-min) {
+    display: block
+  }
+}
+
+.container {
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    width: 1024px;
+  }
+}
+ 
+    
+  
