@@ -4,7 +4,7 @@
     </div>
     <div class="video-content">
       <img src="../img/play-icon.png" alt="play-icon">
-      <span>WATCH OUR STORY</span>
+      <span class="text-roboto">WATCH OUR STORY</span>
     </div>
   </q-img>
 </template>
@@ -25,9 +25,20 @@
   top: 50%
   left: 50%
   transform: translate(-50%, -50%)
-  margin-top: 20px
+  margin-top: 5px
+
+.video-content img
+  width: 100px
+  height: 100px
+  display: flex
+  margin: 0 auto
+  
 
 .video-content span
   display: block
   margin-top: 35px
+  font-size: 16px
+  text-align: center
+  font-weight: 600
+
 </style>

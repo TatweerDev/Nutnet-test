@@ -36,6 +36,9 @@
 .about-descr span
   display: block
   margin-bottom: 35px
-  padding-right: 95px
+  padding-right: 60px
+  color: #636268
+  font-size: 14px
+  line-height: 22px
 
 </style>
