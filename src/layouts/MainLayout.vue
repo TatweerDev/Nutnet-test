@@ -5,6 +5,7 @@
     <page-story />
     <page-expertise />
     <page-team />
+    <page-works />
   </q-layout>
 </template>
 
@@ -14,9 +15,10 @@ import PageAbout from '../components/PageAbout.vue'
 import PageStory from '../components/PageStory.vue'
 import PageExpertise from '../components/PageExpertise.vue'
 import PageTeam from '../components/PageTeam.vue'
+import PageWorks from '../components/PageWorks.vue'
 
 export default {
-  components: { PageAbout, PageStory, PageHeader, PageExpertise, PageTeam },
+  components: { PageAbout, PageStory, PageHeader, PageExpertise, PageTeam, PageWorks },
 
 }
 
