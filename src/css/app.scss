@@ -7,6 +7,12 @@
   font-family: 'Roboto', Helvetica, sans-serif
 }
 
+.overlay {
+  background-color: #281357;
+  opacity: 0.8;
+}
+  
+
 .screen-mobile {
   @media (max-width: $breakpoint-xs-max) {
     display: block

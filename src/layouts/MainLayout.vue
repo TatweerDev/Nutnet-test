@@ -8,6 +8,7 @@
     <page-works />
     <page-carousel />
     <page-form />
+    <page-footer />
   </q-layout>
 </template>
 
@@ -20,9 +21,10 @@ import PageTeam from '../components/PageTeam.vue'
 import PageWorks from '../components/PageWorks.vue'
 import PageCarousel from '../components/PageCarousel.vue'
 import PageForm from '../components/PageForm.vue'
+import PageFooter from '../components/PageFooter.vue'
 
 export default {
-  components: { PageAbout, PageStory, PageHeader, PageExpertise, PageTeam, PageWorks, PageCarousel, PageForm },
+  components: { PageAbout, PageStory, PageHeader, PageExpertise, PageTeam, PageWorks, PageCarousel, PageForm, PageFooter },
 
 }
 

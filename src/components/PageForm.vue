@@ -50,7 +50,7 @@ export default {
   flex-direction: column
   align-items: center
   width: 460px
-  margin: 20px auto
+  margin: 70px auto
 
 .form h3
   font-size: 16px
