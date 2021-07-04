@@ -1,5 +1,5 @@
 <template>
-  <q-img src="../img/Body2-bg.jpg" class="video-image">
+  <q-img src="../img/Body2-bg.jpg" class="carousel-image">
     <div class="absolute-full carousel-overlay">
     </div>
     <div class="q-pa-md container carousel">
@@ -21,6 +21,9 @@
 </template>
 
 <style lang="sass" scoped>
+.carousel-image
+  height: 500px
+
 .carousel-overlay
   background-color: #281357
   opacity: 0.8
@@ -64,6 +67,7 @@
   display: flex
   flex-direction: row
   align-items: center
+  margin-top: 40px
 
 .carousel-buttons li
   display: block
