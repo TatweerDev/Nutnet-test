@@ -6,6 +6,8 @@
     <page-expertise />
     <page-team />
     <page-works />
+    <page-carousel />
+    <page-form />
   </q-layout>
 </template>
 
@@ -16,9 +18,11 @@ import PageStory from '../components/PageStory.vue'
 import PageExpertise from '../components/PageExpertise.vue'
 import PageTeam from '../components/PageTeam.vue'
 import PageWorks from '../components/PageWorks.vue'
+import PageCarousel from '../components/PageCarousel.vue'
+import PageForm from '../components/PageForm.vue'
 
 export default {
-  components: { PageAbout, PageStory, PageHeader, PageExpertise, PageTeam, PageWorks },
+  components: { PageAbout, PageStory, PageHeader, PageExpertise, PageTeam, PageWorks, PageCarousel, PageForm },
 
 }
 
