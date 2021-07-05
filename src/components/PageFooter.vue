@@ -89,6 +89,8 @@
   transform: translateX(-50%)
   margin-top: 70px
   z-index: 3
+  width: 1024px
+  padding: 0 40px
 
 .footer-top
   display: flex

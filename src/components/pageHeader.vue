@@ -18,20 +18,15 @@
               tajam
           </router-link>
         </q-toolbar-title>
-          <q-tabs
-            active-color="accent"
-            indicator-color="transparent"
-            dense               
-          >
-            <q-route-tab name="main" label="HOME" to="/" />
-            <q-route-tab name="about" label="ABOUT" to="/about" />
-            <q-route-tab name="expertise" label="EXPERTISE" to="/expertise" />
-            <q-route-tab name="team" label="TEAM" to="/team" />
-            <q-route-tab name="works" label="WORKS" to="/works" />
-            <q-route-tab name="ps" label="PEOPLE SAY" to="/ps" />
-            <q-route-tab name="contact" label="CONTACT" to="/contact" />
-          </q-tabs>
-
+          <nav>
+            <button :class="{'active' : active == 'home'}" @click="homeClick">HOME</button>
+            <button :class="{'active' : active == 'about'}"  @click="scrollTo('about')">ABOUT</button>
+            <button :class="{'active' : active == 'expertise'}"  @click="scrollTo('expertise')">EXPERTISE</button>
+            <button :class="{'active' : active == 'teams'}"  @click="scrollTo('teams')">TEAMS</button>
+            <button :class="{'active' : active == 'works'}"  @click="scrollTo('works')">WORKS</button>
+            <button :class="{'active' : active == 'people'}"  @click="scrollTo('people')">PEOPLE SAY</button>
+            <button :class="{'active' : active == 'contact'}"  @click="scrollTo('contact')">CONTACT</button>
+          </nav>
       </q-toolbar>
     </div>
 
@@ -46,6 +41,28 @@
     </q-img>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      active: 'home'
+    }
+  },
+  methods: {
+    scrollTo(el) {
+      this.active = el
+      document.getElementById(el).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+    },
+    homeClick() {
+      this.active = 'home'
+    }
+  }
+}
+</script>
 
 <style lang="sass" scoped>
 .header-image
@@ -115,4 +132,19 @@
 
 .q-tab__label
   font-size: 13px !important
+
+nav button
+  background: transparent
+  border: none
+  font-size: 13px
+  color: #fff
+  font-weight: bold
+  cursor: pointer
+  padding: 5px 13px
+  &:hover
+    opacity: 0.8
+
+.active
+  color: #00e0d0
+
 </style>
