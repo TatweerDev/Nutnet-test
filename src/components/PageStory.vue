@@ -15,6 +15,8 @@
   cursor: pointer
   @media (min-width: $tablet-width) and (max-width: $desktop-width)
     height: 450px
+  @media (max-width: $tablet-width)
+    height: 370px
 
 .video-overlay
   background-color: #281357

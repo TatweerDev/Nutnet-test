@@ -51,8 +51,8 @@
       </div>
       <div class="footer-bottom">
         <div class="footer-links">
-          <a href="#">HELP</a>
-          <a href="#">TERMS & CONDITION</a>
+          <a href="https://beardfolio.best/#/" target="_blank" rel="noopener">HELP</a>
+          <a href="https://beardfolio.best/#/" target="_blank" rel="noopener">TERMS & CONDITION</a>
           <a href="#">PRIVACY</a>
         </div>
         <span class="text-white">Copyright © 2015 - Tajam Creative</span>
@@ -70,6 +70,8 @@
   height: 400px
   @media (min-width: $tablet-width) and (max-width: $desktop-width)
     height: 590px
+  @media (max-width: $tablet-width)
+    height: 760px
 
 .overlay
   background-color: #281357
@@ -95,6 +97,8 @@
   padding: 0 40px
   @media (min-width: $tablet-width) and (max-width: $desktop-width)
     width: 600px
+  @media (max-width: $tablet-width)
+    margin-top: 40px
 
 .footer-top
   display: flex
@@ -102,15 +106,23 @@
   justify-content: space-between
   @media (min-width: $tablet-width) and (max-width: $desktop-width)
     flex-wrap: wrap
+  @media (max-width: $tablet-width)
+    flex-direction: column
+    align-items: center
 
 .footer-logo
   display: flex
   flex-direction: row
   align-items: center
   margin-bottom: 30px
+  @media (max-width: $tablet-width)
+    justify-content: space-around
+    padding: 0 50px
 
 .footer-section-1
   width: 245px
+  @media (max-width: $tablet-width)
+    margin-bottom: 30px
 
 .logo-descr
   font-size: 14px
@@ -124,6 +136,8 @@
   margin-bottom: 40px
   margin-top: 16px
   display: block
+  @media (max-width: $tablet-width)
+    margin-bottom: 25px
 
 .footer-adress
   display: flex
@@ -153,6 +167,8 @@
   font-weight: bold
   display: block
   margin: 15px 0 45px 0
+  @media (max-width: $tablet-width)
+    margin: 25px auto 25px 25px
 
 .email-input
   cursor: pointer
@@ -190,6 +206,8 @@
   display: flex
   justify-content: space-between
   padding-right: 40px
+  @media (max-width: $tablet-width)
+    padding: 0
 
 .socials-list li:hover
   opacity: 0.8
@@ -201,6 +219,10 @@
     justify-content: space-between
     width: 100%
     margin-bottom: 20px
+  @media (max-width: $tablet-width)
+    display: flex
+    justify-content: space-between
+    width: 100%
 
 .footer-links a
   margin-right: 32px
@@ -208,6 +230,9 @@
   text-decoration: none
   &:hover
     opacity: 0.8
+  @media (max-width: $tablet-width)
+    margin-right: 0
+    margin-bottom: 20px
 
 .footer-bottom
   margin-top: 70px
@@ -218,5 +243,12 @@
     margin-top: 15px
     flex-direction: column
     align-items: center
+  @media (max-width: $tablet-width)
+    margin-top: 10px
+    flex-direction: column
+    align-items: center
+
+
+
 
 </style>

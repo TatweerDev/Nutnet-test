@@ -25,6 +25,8 @@
   height: 500px
   @media (min-width: $tablet-width) and (max-width: $desktop-width)
     height: 540px
+  @media (max-width: $tablet-width)
+    height: 650px
 
 .carousel-overlay
   background-color: #281357
@@ -47,6 +49,8 @@
   margin: 0 auto
   @media (min-width: $tablet-width) and (max-width: $desktop-width)
     width: 540px
+  @media (max-width: $tablet-width)
+    width: auto
 
 .carousel-text
   text-align: center

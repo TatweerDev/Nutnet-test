@@ -10,7 +10,7 @@
       </li> -->
       <li class="expertise-item" v-for="(item, index) in expertise" :key="index">
         <img src="../img/comp.png" alt="item.alt">
-        <h3>WEB DESIGN & DEVELOPMENT</h3>
+        <h3>SEARCH ENGINE OPTIMIZATION</h3>
         <span>This is Photoshop`s version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean</span>
       </li>
     </ul>
@@ -115,11 +115,17 @@ export default {
     &:nth-child(2),
     &:nth-child(4)
       border-right: none
+  @media (max-width: $tablet-width)
+    width: auto
+    border-right: none
+    border-bottom: 1px solid #ebebeb !important
       
 
 .expertise-item h3
-  font-size: 15px
+  font-size: 14px
   font-weight: bold
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+     font-size: 14px
 
 .expertise-item span
   display: block
@@ -136,5 +142,8 @@ export default {
   margin: 70px auto
   @media (min-width: $tablet-width) and (max-width: $desktop-width)
     width: 600px
+  @media (max-width: $tablet-width)
+    width: 360px
+    margin-bottom: 0
     
 </style>

@@ -51,6 +51,10 @@ export default {
   align-items: center
   width: 460px
   margin: 70px auto
+  @media (max-width: $tablet-width)
+    width: 360px
+    padding: 5px
+    margin: 40px auto
 
 .form h3
   font-size: 16px

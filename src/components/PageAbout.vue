@@ -18,13 +18,22 @@
   justify-content: space-around
   padding-top: 45px
   padding-bottom: 70px
+  @media (max-width: $tablet-width)
+    flex-direction: column
+    align-items: center
 
 .about-img
   width: 235px
   margin: 0 100px 0 auto
+  @media (max-width: $tablet-width)
+    width: 150px
+    margin: 0 auto
 
 .about-descr
   width: 56%
+  @media (max-width: $tablet-width)
+    width: auto
+    text-align: center
 
 .about-descr h2
   margin-top: 25px
@@ -40,5 +49,7 @@
   color: #636268
   font-size: 14px
   line-height: 22px
+  @media (max-width: $tablet-width)
+    padding: 0 10px
 
 </style>

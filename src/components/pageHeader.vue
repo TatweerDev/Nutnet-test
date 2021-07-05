@@ -3,6 +3,13 @@
     <q-img src="../img/header-bg.jpg" class="header-image">
     <div class="bg-transparent container header-wrapper">
       <q-toolbar>
+        
+        <q-toolbar-title class="text-roboto logo">
+          <router-link to="/" class="link">
+            <q-img src="../img/logo.png" class="logo-img" />
+              tajam
+          </router-link>
+        </q-toolbar-title>
         <q-btn
           class="screen-mobile"
           flat
@@ -11,14 +18,7 @@
           icon="menu"
           aria-label="Menu"
         />
-
-        <q-toolbar-title class="screen-tablet text-roboto logo">
-          <router-link to="/" class="link">
-            <q-img src="../img/logo.png" class="logo-img" />
-              tajam
-          </router-link>
-        </q-toolbar-title>
-          <nav>
+          <nav class="screen-tablet">
             <button :class="{'active' : active == 'home'}" @click="homeClick">HOME</button>
             <button :class="{'active' : active == 'about'}"  @click="scrollTo('about')">ABOUT</button>
             <button :class="{'active' : active == 'expertise'}"  @click="scrollTo('expertise')">EXPERTISE</button>
@@ -68,6 +68,8 @@ export default {
 .header-image
   @media (min-width: $tablet-width) and (max-width: $desktop-width)
     height: 520px
+  @media (max-width: $tablet-width)
+    height: 545px
 
   height: 670px
 
@@ -83,6 +85,8 @@ export default {
 .link
   text-decoration: none
   color: #00e0d0
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    font-size: 22px
 
 .header-wrapper
   position: relative
@@ -119,6 +123,9 @@ export default {
   left: 50%
   transform: translateX(-50%)
   margin-top: -130px
+  @media (max-width: $tablet-width)
+    width: 360px
+    top: 43%
 
 .slogan-descr
   @media (min-width: $tablet-width) and (max-width: $desktop-width)

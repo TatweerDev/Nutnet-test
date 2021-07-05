@@ -7,7 +7,7 @@
       <span class="text-playfair team-descr">Lorem ipsum dolor sit amet proin gravida nibh vel velit</span>
       <ul class="team-list">
         <li v-for="(member, index) in team" :key="index">
-          <img src="../img/team-photo.png" alt="team-photo">
+          <img src="../img/team-photo.png" alt="team-photo" class="team-item-img">
           <div class="team-item__text">
             <h3>{{ member.name }}</h3>
             <span>{{ member.position }}</span>
@@ -52,6 +52,8 @@ export default {
   height: 712px
   @media (min-width: $tablet-width) and (max-width: $desktop-width)
     height: 1086px
+  @media (max-width: $tablet-width)
+    height: 950px
 
 .team-overlay
   background-color: #281357
@@ -87,6 +89,8 @@ export default {
     opacity: 0.5
     background: #fff
     transform: translateX(-50%)
+  @media (max-width: $tablet-width)
+    text-align: center
 
 .team-list
   display: flex
@@ -96,6 +100,11 @@ export default {
   @media (min-width: $tablet-width) and (max-width: $desktop-width)
     width: 500px
     flex-wrap: wrap
+  @media (max-width: $tablet-width)
+    width: 360px
+    flex-wrap: wrap
+    padding: 0 7px
+    margin-bottom: 25px
 
 .team-list li
   display: block
@@ -121,5 +130,9 @@ export default {
 .team-slogan
   opacity: 0.8
   margin-bottom: 20px
+
+.team-item-img
+  @media (max-width: $tablet-width)
+    width: 170px
 
 </style>

@@ -32,12 +32,16 @@
   flex-direction: row
   justify-content: space-between
   padding: 50px 40px
+  @media (max-width: $tablet-width)
+    padding: 20px 10px
 
 .works-top h3
   font-size: 22px
   margin: 0
   font-weight: bold
   color: #413d4b
+  @media (max-width: $tablet-width)
+    font-size: 18px
 
 .works-top a
   text-decoration: none
@@ -47,10 +51,19 @@
 .image-wrapper
   display: flex
   flex-direction: row
+  @media (max-width: $tablet-width)
+    flex-wrap: wrap
+    width: 360px
+    margin: 0 auto
 
 .works-button
   display: flex
   margin: 70px auto
   width: 140px
+  @media (max-width: $tablet-width)
+    margin: 40px auto
 
+.q-img
+  @media (max-width: $tablet-width)
+    width: 120px
 </style>

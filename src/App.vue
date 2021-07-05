@@ -13,4 +13,7 @@ export default defineComponent({
 ul
   list-style: none
   padding-left: 0
+html
+  @media (max-width: 360px)
+  overflow-x: hidden
 </style>
