@@ -13,6 +13,8 @@
 .video-image
   height: 550px
   cursor: pointer
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    height: 450px
 
 .video-overlay
   background-color: #281357

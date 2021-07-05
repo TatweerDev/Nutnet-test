@@ -55,6 +55,8 @@ export default {
 .form h3
   font-size: 16px
   font-weight: bold
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    margin-bottom: 30px
 
 .form input
   width: 100%

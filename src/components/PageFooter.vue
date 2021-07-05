@@ -68,6 +68,8 @@
 
 .footer-image
   height: 400px
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    height: 590px
 
 .overlay
   background-color: #281357
@@ -91,11 +93,15 @@
   z-index: 3
   width: 1024px
   padding: 0 40px
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    width: 600px
 
 .footer-top
   display: flex
   flex-direction: row
   justify-content: space-between
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    flex-wrap: wrap
 
 .footer-logo
   display: flex
@@ -104,14 +110,14 @@
   margin-bottom: 30px
 
 .footer-section-1
-  width: 285px
+  width: 245px
 
 .logo-descr
   font-size: 14px
   line-height: 26px
 
 .footer-section-2
-  width: 270px
+  width: 240px
 
 .footer-studio
   font-weight: bold
@@ -189,6 +195,13 @@
   opacity: 0.8
   cursor: pointer
 
+.footer-links
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    display: flex
+    justify-content: space-between
+    width: 100%
+    margin-bottom: 20px
+
 .footer-links a
   margin-right: 32px
   color: #fff
@@ -201,5 +214,9 @@
   display: flex
   flex-direction: row
   justify-content: space-between
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    margin-top: 15px
+    flex-direction: column
+    align-items: center
 
 </style>

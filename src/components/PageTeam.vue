@@ -50,6 +50,8 @@ export default {
 <style lang="sass" scoped>
 .team-image
   height: 712px
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    height: 1086px
 
 .team-overlay
   background-color: #281357
@@ -91,9 +93,13 @@ export default {
   justify-content: space-between
   width: 940px
   margin-bottom: 60px
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    width: 500px
+    flex-wrap: wrap
 
 .team-list li
   display: block
+  margin-bottom: 20px
 
 
 .team-item__text

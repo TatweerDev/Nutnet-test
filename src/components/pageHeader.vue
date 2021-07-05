@@ -66,6 +66,9 @@ export default {
 
 <style lang="sass" scoped>
 .header-image
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    height: 520px
+
   height: 670px
 
 .overlay
@@ -118,6 +121,10 @@ export default {
   margin-top: -130px
 
 .slogan-descr
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    width: 400px
+    margin: 40px auto
+
   display: block
   text-align: center
   font-weight: 300
@@ -134,6 +141,10 @@ export default {
   font-size: 13px !important
 
 nav button
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    font-size: 11px
+    padding: 5px 5px
+
   background: transparent
   border: none
   font-size: 13px
@@ -143,7 +154,8 @@ nav button
   padding: 5px 13px
   &:hover
     opacity: 0.8
-
+  
+  
 .active
   color: #00e0d0
 

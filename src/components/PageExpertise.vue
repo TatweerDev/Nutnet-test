@@ -3,11 +3,16 @@
     <h2 class="text-playfair">EXPERTISE</h2>
     <span class="text-playfair expertise-descr" >Lorem ipsum dolor sit amet proin gravida nibh vel velit</span>
     <ul class="expertise-list">
-      <li class="expertise-item" v-for="(item, index) in expertise" :key="index">
+      <!-- <li class="expertise-item" v-for="(item, index) in expertise" :key="index">
         <img :src="item.img" :alt="item.alt">
         <h3>{{ item.title }}</h3>
         <span>{{ item.descr }}</span>
-      </li>     
+      </li> -->
+      <li class="expertise-item" v-for="(item, index) in expertise" :key="index">
+        <img src="../img/comp.png" alt="item.alt">
+        <h3>WEB DESIGN & DEVELOPMENT</h3>
+        <span>This is Photoshop`s version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean</span>
+      </li>
     </ul>
   </section>
 </template>
@@ -100,6 +105,17 @@ export default {
   &:nth-child(5),
   &:nth-child(6)
     border-bottom: none
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    width: 300px
+    height: 300px
+    &:nth-child(3)
+      border-right: 1px solid #ebebeb
+    &:nth-child(4)
+      border-bottom: 1px solid #ebebeb
+    &:nth-child(2),
+    &:nth-child(4)
+      border-right: none
+      
 
 .expertise-item h3
   font-size: 15px
@@ -118,6 +134,7 @@ export default {
   width: 940px
   flex-wrap: wrap
   margin: 70px auto
-  
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    width: 600px
     
 </style>

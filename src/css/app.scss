@@ -32,6 +32,10 @@
 }
 
 .container {
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    width: 600px;
+  }
   @media (min-width: $desktop-width) {
     margin: 0 auto;
     width: 1024px;
