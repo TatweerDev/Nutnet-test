@@ -134,8 +134,8 @@ module.exports = configure(function (ctx) {
 
       manifest: {
         name: `Nutnet - test work`,
-        short_name: `Nutnet - test work`,
-        description: `Tajam site`,
+        short_name: `Tajam`,
+        description: `Tajam site - my test work for NutNet company`,
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
