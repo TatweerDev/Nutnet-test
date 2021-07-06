@@ -38,6 +38,7 @@ export default {
   @media (max-width: $tablet-width)
     height: 370px
 
+
 .video-overlay
   background-color: #281357
   opacity: 0.8
@@ -83,6 +84,12 @@ export default {
   transform: translate(-50%, -50%)
   width: 900px
   height: 700px
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    width: 600px
+    height: 500px
+  @media (max-width: $tablet-width)
+    width: 360px
+    height: 280px
 
 .video-frame
   width: 100%
