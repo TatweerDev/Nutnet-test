@@ -47,7 +47,7 @@ export default {
         },
         {
           name: 'JANE DOE',
-          text: 'I want to be a billionaire! Like my uncle. - What ? You uncle is a billionaire? - No. But he wants to be a billionaire to)',
+          text: 'I want to be a billionaire! Like my uncle. - What ? You uncle is a billionaire? - No. But he wants to be a billionaire too)',
           position: 'STAFF MANAGER'
         },
         {

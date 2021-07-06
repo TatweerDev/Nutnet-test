@@ -9,17 +9,12 @@
             <q-img src="../img/logo.png" class="logo-img" />
               tajam
           </router-link>
-        </q-toolbar-title>
-        <q-btn
-          class="screen-mobile"
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-        />
+          </q-toolbar-title>
+          <mobile-menu />
+                   
+          
           <nav class="screen-tablet">
-            <button :class="{'active' : active == 'home'}" @click="homeClick">HOME</button>
+            <button :class="{'active' : active == 'home'}" @click="homeClick" @toggle-home="homeClick">HOME</button>
             <button :class="{'active' : active == 'about'}"  @click="scrollTo('about')">ABOUT</button>
             <button :class="{'active' : active == 'expertise'}"  @click="scrollTo('expertise')">EXPERTISE</button>
             <button :class="{'active' : active == 'teams'}"  @click="scrollTo('teams')">TEAMS</button>
@@ -43,7 +38,10 @@
 </template>
 
 <script>
+import MobileMenu from './MobileMenu.vue'
+
 export default {
+  components: { MobileMenu },
   data() {
     return {
       active: 'home'
@@ -117,7 +115,7 @@ export default {
 .slogan
   position: absolute
   background: transparent !important
-  z-index: 3
+  z-index: 2
   width: 780px
   top: 50%
   left: 50%
@@ -161,9 +159,13 @@ nav button
   padding: 5px 13px
   &:hover
     opacity: 0.8
-  
+  @media (max-width: $tablet-width)
+    color: #000
   
 .active
   color: #00e0d0
+
+.text-center
+  padding-top: 5px
 
 </style>

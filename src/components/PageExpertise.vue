@@ -3,16 +3,16 @@
     <h2 class="text-playfair">EXPERTISE</h2>
     <span class="text-playfair expertise-descr" >Lorem ipsum dolor sit amet proin gravida nibh vel velit</span>
     <ul class="expertise-list">
-      <!-- <li class="expertise-item" v-for="(item, index) in expertise" :key="index">
+      <li class="expertise-item" v-for="(item, index) in expertise" :key="index">
         <img :src="item.img" :alt="item.alt">
         <h3>{{ item.title }}</h3>
         <span>{{ item.descr }}</span>
-      </li> -->
-      <li class="expertise-item" v-for="(item, index) in expertise" :key="index">
+      </li>
+      <!-- <li class="expertise-item" v-for="(item, index) in expertise" :key="index">
         <img src="../img/comp.png" alt="item.alt">
         <h3>SEARCH ENGINE OPTIMIZATION</h3>
         <span>This is Photoshop`s version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean</span>
-      </li>
+      </li> -->
     </ul>
   </section>
 </template>
@@ -145,5 +145,4 @@ export default {
   @media (max-width: $tablet-width)
     width: 360px
     margin-bottom: 0
-    
 </style>

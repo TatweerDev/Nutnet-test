@@ -1,5 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
+    <!-- <mobile-menu /> -->
     <page-header />
     <page-about id="about" />
     <page-story />
@@ -24,6 +25,7 @@ import PageCarousel from '../components/PageCarousel.vue'
 import PageForm from '../components/PageForm.vue'
 import PageFooter from '../components/PageFooter.vue'
 import PageScroll from '../components/PageScroll.vue'
+// import MobileMenu from '../components/MobileMenu.vue'
 
 export default {
   components: { 
@@ -36,7 +38,8 @@ export default {
     PageCarousel, 
     PageForm, 
     PageFooter, 
-    PageScroll 
+    PageScroll,
+    // MobileMenu
   },
 
 }

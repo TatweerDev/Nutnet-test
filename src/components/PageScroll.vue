@@ -22,6 +22,7 @@ export default {
   },
   methods: {
     scrollUp() {
+      this.$emit('toggle-home')
       window.scrollTo({
         top: 0,
         left: 0,
