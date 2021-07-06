@@ -56,7 +56,7 @@ export default {
           img: '../img/love.png',
           alt: 'love-icon',
           title: 'MADE WITH LOVE',
-          descr: 'This is Photoshop`s version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.'
+          descr: 'This is Photoshop`s version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.'
         },
       ]
     }
